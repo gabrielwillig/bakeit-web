@@ -170,11 +170,10 @@ export function Footer() {
             </Flex>
             <List withPadding>
               {routes.map((item, i) => (
-                <List.Item>
+                <List.Item key={item.label +"Pastel"+ i}>
                   <Link
                     className={classes.link}
                     href={item.route}
-                    key={item.label + i}
                   >
                     {item.label}
                   </Link>
