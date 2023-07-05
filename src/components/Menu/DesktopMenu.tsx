@@ -57,7 +57,7 @@ export function DesktopMenu() {
     <Flex className={classes.container}>
       <Box className={classes.logoContainer}>
         <Link href="/">
-          <Image src={isScrolled ? whiteLogo : redLogo} alt="Bake It Logo" layout="responsive" />
+          <Image src={isScrolled ? whiteLogo : redLogo} alt="Bake It Logo" width={180} />
         </Link>
       </Box>
       {routes.map((item, i) => (

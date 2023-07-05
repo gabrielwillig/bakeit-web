@@ -1,6 +1,7 @@
 import { Box, createStyles, Stack, Text } from '@mantine/core';
 import { useMediaQuery } from '@mantine/hooks';
 import { PropsWithChildren, ReactNode } from 'react';
+import { CornerButton } from '../CornerButton';
 import { Footer } from '../Footer';
 import { DesktopMenu } from '../Menu/DesktopMenu';
 
@@ -29,6 +30,7 @@ export function Layout({ children }: PropsWithChildren) {
       <Box className={classes.wrapper}>
         {children}
       </Box>
+      <CornerButton/>
       <Footer/>
     </Stack>
   );

@@ -4,14 +4,14 @@ import { useRef } from "react";
 import Autoplay from "embla-carousel-autoplay";
 import { Carousel } from "@mantine/carousel";
 
-export default function Cardapio() {
+export default function ABakeIt() {
   
   const autoplay = useRef(Autoplay({ delay: 2000 }));
 
   return (
     <>
       <Head>
-        <title>Bake It | Cardápio</title>
+        <title>Bake It | A Bake It</title>
         <meta
           name="viewport"
           content="minimum-scale=1, initial-scale=1, width=device-width"

@@ -13,6 +13,6 @@ export const routes = [
     },
     {
         label: "A BAKE IT",
-        route: "/sobre-nos",
+        route: "/a-bake-it",
     }
 ];

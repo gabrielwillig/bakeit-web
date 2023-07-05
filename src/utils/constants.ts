@@ -3,6 +3,8 @@ export const MAPS_ADDRESS_URL = "https://goo.gl/maps/U4SV1rVmWSJvycGd8";
 
 export const WILLIG_GITHUB = "https://github.com/gabrielwillig";
 
+export const INSTA_TOKEN="IGQVJXeHBNQVEteXhfSF8tamlGSEowcEdkS0l4a0ZARR0gyUGdNVlRPUk14OEFSNTEwTjhsNlJyMmlILXpTRHlpU1EzMzFIb3prTWJNNkxmTUhCZAkxCRTVBUEVVcUNwVGlxZAUhHSnF0S2kzZA2prNzFOQwZDZD";
+
 export const bakeItSocials = Object.freeze({
     INSTAGRAM: "https://www.instagram.com/bakeitconfeitaria/",
     FACEBOOK: "https://www.facebook.com/bakeitconfeitariaartesanal",

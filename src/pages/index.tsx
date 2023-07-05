@@ -9,7 +9,6 @@ import {
   Box,
   Button,
   createStyles,
-  Flex,
   Grid,
   Stack,
   Text,
@@ -20,6 +19,7 @@ import Image from "next/image";
 
 import Link from "next/link";
 import { FaChevronRight } from "react-icons/fa";
+import { InstaFeed } from "@/components/InstagramFeed";
 
 const useStyles = createStyles((theme) => ({
   slide: {
@@ -38,6 +38,8 @@ const useStyles = createStyles((theme) => ({
     justifyContent: "center",
 
     padding: "2.5%",
+
+    borderRadius: "5%",
   },
   whiteBox: {
     border: "3px solid white",
@@ -53,6 +55,8 @@ const useStyles = createStyles((theme) => ({
 
     alignItems: "center",
     justifyContent: "center",
+
+    borderRadius: "5%",
   },
   text: {
     fontSize: 24,
@@ -83,11 +87,14 @@ const useStyles = createStyles((theme) => ({
   },
   aboutUs: {
     width: "100%",
+    maxWidth: "500px",
     height: "auto",
 
     color: "black",
 
     fontSize: 20,
+
+    textAlign: "justify",
   },
   anchor: {
     width: "fit-content",
@@ -117,6 +124,12 @@ const useStyles = createStyles((theme) => ({
         opacity: 1,
       },
     },
+  },
+  gridCol: {
+    width:"100%",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
   },
 }));
 
@@ -154,7 +167,7 @@ export default function Home() {
                     <Image
                       src={whiteIcon}
                       alt="Bake It White Icon"
-                      layout="responsive"
+                      width={120}
                     />
                   </Box>
                   <Text className={classes.text}>
@@ -180,7 +193,7 @@ export default function Home() {
                     <Image
                       src={whiteIcon}
                       alt="Bake It White Icon"
-                      layout="responsive"
+                      width={120}
                     />
                   </Box>
                   <Text className={classes.text}>Faça sua encomenda</Text>
@@ -192,15 +205,15 @@ export default function Home() {
             </BackgroundImage>
           </Carousel.Slide>
         </Carousel>
-        <Grid columns={2} gutter="xl" p="2% 10%">
-          <Grid.Col span={1}>
+        <Grid columns={2} w="100%" gutter="xl" p="2% 10%">
+          <Grid.Col span={1} className={classes.gridCol}>
             <Stack className={classes.aboutUs}>
               <Text fw={700} fz={26}>
                 <Text component="span" ff="Mermaid">
                   JÁ CONHECE A BAKE IT ?
                 </Text>
               </Text>
-              <Text ff="Chaparral">
+              <Text ff="Chaparral" ml={16}>
                 Somos uma empresa fundada em 2014, na encantadora cidade
                 litorânea de Matinhos, no Paraná. Desde nossa criação, temos
                 como principal missão apresentar ao público a incrível,
@@ -217,20 +230,8 @@ export default function Home() {
               </Link>
             </Stack>
           </Grid.Col>
-          <Grid.Col span={1}>
-            <Carousel
-              height="auto"
-              w="100%"
-              slideGap="xs"
-              controlsOffset="md"
-              controlSize={28}
-              loop
-              withIndicators
-            >
-              <Carousel.Slide>
-                
-              </Carousel.Slide>
-            </Carousel>
+          <Grid.Col span={1} className={classes.gridCol}>
+            <InstaFeed limit={3} />
           </Grid.Col>
         </Grid>
       </Stack>

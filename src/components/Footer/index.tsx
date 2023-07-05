@@ -115,7 +115,7 @@ export function Footer() {
         <Grid.Col span={1} className={classes.leftCol}>
           <Box className={classes.logoContainer}>
             <Link href="/">
-              <Image src={whiteLogo} alt="Bake It Logo" layout="responsive" />
+              <Image src={whiteLogo} alt="Bake It Logo" width={180} />
             </Link>
           </Box>
           <Flex className={classes.socials}>
