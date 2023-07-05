@@ -39,7 +39,7 @@ const useStyles = createStyles((theme) => ({
     position: "relative",
 
     width: "100%",
-    height: "300px",
+    height: "280px",
 
   },
   logoContainer: {
