@@ -26,6 +26,7 @@ import { MdOutlineEmail } from "react-icons/md";
 
 import { routes } from "@/routes/routes";
 import {
+  ADDRESS,
   bakeItSocials,
   MAPS_ADDRESS_URL,
   MAPS_IFRAME_URL,
@@ -90,7 +91,7 @@ const useStyles = createStyles((theme) => ({
     fontSize: 16,
 
     ":hover": {
-      borderBottom: "2px solid white",
+      textDecoration: "underline",
     },
   },
   developedBy: {
@@ -143,8 +144,7 @@ export function Footer() {
               <Text className={classes.text}>FALE CONOSCO</Text>
               <Link href={MAPS_ADDRESS_URL} target="_blank">
                 <Text className={classes.link}>
-                  Av. Manoel Ribas, 2658 - Santa Felicidade, Curitiba - PR,
-                  80810-345
+                  {ADDRESS}
                 </Text>
               </Link>
               <Link href={bakeItSocials.EMAIL_TO} target="_blank">

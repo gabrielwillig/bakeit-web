@@ -1,9 +1,11 @@
 import { bakeItSocials } from "@/utils/constants";
-import { Button, createStyles, UnstyledButton } from "@mantine/core";
+import { createStyles, UnstyledButton } from "@mantine/core";
 import { FaWhatsapp } from "react-icons/fa";
 
 const useStyles = createStyles((theme) => ({
     button: {
+        zIndex: 999,
+        
         position: "fixed",
 
         bottom: 32,

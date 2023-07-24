@@ -28,7 +28,7 @@ const useStyles = createStyles((theme) => ({
     justifyContent: "center",
   },
   infoBox: {
-    width: "20%",
+    width: 360,
     height: "65%",
 
     backgroundColor: "rgba(0,0,0, 0.33)",
@@ -76,7 +76,7 @@ const useStyles = createStyles((theme) => ({
 
     backgroundColor: "white",
 
-    width: "200px",
+    width: "fit-content",
     height: "45px",
 
     ":hover": {
@@ -147,12 +147,12 @@ export default function Home() {
       </Head>
       <Stack>
         <Carousel
-          height="760px"
-          w="100%"
           slideGap="xs"
           controlsOffset="md"
           controlSize={28}
           loop
+          height={760}
+          w="100%"
         >
           <Carousel.Slide>
             <BackgroundImage
