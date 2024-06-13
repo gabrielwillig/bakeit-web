@@ -1,22 +1,10 @@
-import {
-  Button,
-  createStyles,
-  Grid,
-  Stack,
-} from "@mantine/core";
-import { Box, Text } from "@mantine/core";
-import Head from "next/head";
-import Image from "next/image";
-
-import partners from "@/assets/partners-bakeit.jpg";
-import redIcon from "@/assets/icon-bakeit-red.png";
-import {
-  ADDRESS,
-  MAPS_ADDRESS_URL,
-  MAPS_IFRAME_URL,
-} from "@/utils/constants";
-import Link from "next/link";
-import { LogoDivider } from "@/components/Divider";
+import partners from '@/assets/partners-bakeit.jpg';
+import { LogoDivider } from '@/components/Divider';
+import { ADDRESS, MAPS_ADDRESS_URL, MAPS_IFRAME_URL } from '@/utils/constants';
+import { Box, Button, createStyles, Grid, Stack, Text } from '@mantine/core';
+import Head from 'next/head';
+import Image from 'next/image';
+import Link from 'next/link';
 
 const useStyles = createStyles((theme) => ({
   grid: {
@@ -59,7 +47,7 @@ export default function ABakeIt() {
         />
       </Head>
       <Stack align="center">
-        <LogoDivider/>
+        <LogoDivider />
         <Text ff="Mermaid" c="black" fz={30} fw={700}>
           QUEM SOMOS
         </Text>
@@ -69,7 +57,12 @@ export default function ABakeIt() {
           <Box
             w="100%"
             h="auto"
-            sx={{ position: "relative", aspectRatio: "763 / 1024", boxShadow: "0 0 26px -4px rgba(0,0,0,0.63)" }}
+            sx={{
+              position: "relative",
+              aspectRatio: "763 / 1024",
+              boxShadow: "0 0 26px -4px rgba(0,0,0,0.63)",
+              flex: 1,
+            }}
           >
             <Image src={partners} alt="Foto Sócios" fill={true} />
           </Box>
@@ -182,11 +175,11 @@ export default function ABakeIt() {
                   radius="xl"
                   ff="Chaparral"
                   sx={{
-                    ":hover":{
+                    ":hover": {
                       color: "black",
                       backgroundColor: "white",
-                      border: "2px solid black"
-                    }
+                      border: "2px solid black",
+                    },
                   }}
                 >
                   Veja no Google Maps

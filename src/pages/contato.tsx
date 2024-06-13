@@ -1,10 +1,13 @@
 import { LogoDivider } from "@/components/Divider";
-import { createStyles, Divider, Flex, Stack, Text } from "@mantine/core";
+import { bakeItSocials } from "@/utils/constants";
+import { Box, createStyles, Divider, Flex, Stack, Text } from "@mantine/core";
 import Head from "next/head";
+import Image from "next/image";
 import Link from "next/link";
 import { FaFacebookSquare, FaInstagram, FaWhatsapp } from "react-icons/fa";
-import { bakeItSocials } from "@/utils/constants";
 import { MdOutlineEmail } from "react-icons/md";
+import cake from "@/assets/cake4-bakeit.jpg";
+import candy from "@/assets/candy2-bakeit.jpg";
 
 const useStyles = createStyles((theme) => ({
   grid: {
@@ -67,13 +70,13 @@ export default function Contato() {
           content="minimum-scale=1, initial-scale=1, width=device-width"
         />
       </Head>
-      <Stack align="center" mb="3rem">
+      <Stack align="center" mb="5rem">
         <LogoDivider />
         <Text ff="Mermaid" c="black" fz={30} fw={700}>
           FALE CONOSCO
         </Text>
-        <Flex w="100%" justify="space-around" align="center" mih="400px">
-          <Stack mx="1.5rem" sx={{ gap: "3rem", flex: 1 }} align="center">
+        <Flex mt="3rem" w="100%" p="0 10%" justify="space-around" align="center">
+          <Stack sx={{ gap: "3rem", flex: 1 }} align="center">
             <Text ff="Mermaid" c="black" ta="center" fz={30} fw={700}>
               NOSSAS REDES SOCIAIS
             </Text>
@@ -94,8 +97,35 @@ export default function Contato() {
               </Link>
             </Stack>
           </Stack>
-          <Divider size="md" color="#FEFEFE" orientation="vertical" />
-          <Stack mx="1.5rem" sx={{ gap: "2rem", flex: 1 }} align="center">
+          <Stack sx={{ flex: 1 }} align="center">
+            <Box
+              w="70%"
+              h="auto"
+              sx={{
+                position: "relative",
+                aspectRatio: "1",
+                boxShadow: "0 0 26px -4px rgba(0,0,0,0.63)",
+              }}
+            >
+              <Image src={cake} alt="Foto Bolo" fill={true} />
+            </Box>
+          </Stack>
+        </Flex>
+        <Flex  mt="3rem" w="100%" p="0 10%" justify="space-around" align="center">
+          <Stack sx={{ flex: 1 }} align="center">
+            <Box
+              w="70%"
+              h="auto"
+              sx={{
+                position: "relative",
+                aspectRatio: "1",
+                boxShadow: "0 0 26px -4px rgba(0,0,0,0.63)",
+              }}
+            >
+              <Image src={candy} alt="Foto Docinhos" fill={true} />
+            </Box>
+          </Stack>
+          <Stack sx={{ gap: "2rem", flex: 1 }} align="center">
             <Text ff="Mermaid" c="black" ta="center" fz={30} fw={700}>
               MANDE UMA MENSAGEM
             </Text>

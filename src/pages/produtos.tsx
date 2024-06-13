@@ -1,21 +1,32 @@
-import { LogoDivider } from "@/components/Divider";
-import { Box, createStyles, Flex, Stack, Text } from "@mantine/core";
-import Head from "next/head";
-import Image from "next/image";
-import cake from "@/assets/cake2-bakeit.jpg";
-import { ProductsTabs } from "@/components/ProductsTab";
+import cake from '@/assets/cake2-bakeit.jpg';
+import { LogoDivider } from '@/components/Divider';
+import { ProductsTabs } from '@/components/ProductsTab';
+import { Box, createStyles, Flex, Stack, Text } from '@mantine/core';
+import Head from 'next/head';
+import Image from 'next/image';
 
 const useStyles = createStyles((theme) => ({
   container: {
     width: "100%",
     height: "auto",
-    padding: "8% 10% 0%",
+    padding: "8% 15% 0%",
     gap: "10%",
     alignItems: "center",
   },
   tab: {
     fontSize: "20px",
     fontColor: "#404040",
+  },
+  textContainer: {
+    height: "100%",
+
+    gap: "1.5rem",
+
+    flex: 1,
+
+    color: "#404040",
+    fontFamily: "Chaparral",
+    fontSize: 20,
   },
 }));
 
@@ -38,23 +49,18 @@ export default function Cardapio() {
         </Text>
         <Flex className={classes.container}>
           <Box
-            w="auto"
-            h="100%"
-            mah="1024px"
-            sx={{ position: "relative", aspectRatio: "750 / 1024", flex: 1 }}
+            w="100%"
+            h="auto"
+            sx={{
+              position: "relative",
+              aspectRatio: "763 / 1024",
+              boxShadow: "0 0 26px -4px rgba(0,0,0,0.63)",
+              flex: 1,
+            }}
           >
             <Image src={cake} alt="Foto Bolo Cereja" fill={true} />
           </Box>
-          <Stack
-            h="100%"
-            align="center"
-            justify="center"
-            sx={{ gap: 16, textIndent: "24px", flex: 1 }}
-            ff="Chaparral"
-            c="#404040"
-            fz={20}
-            ta="justify"
-          >
+          <Stack className={classes.textContainer}>
             <Text>
               Nossos produtos são elaborados com carinho e dedicação, desde a
               escolha de ingredientes de qualidade até a produção artesanal e
@@ -76,7 +82,7 @@ export default function Cardapio() {
         </Flex>
         <LogoDivider />
         <Box w="100%">
-          <ProductsTabs/>
+          <ProductsTabs />
         </Box>
       </Stack>
     </>

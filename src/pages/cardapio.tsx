@@ -18,7 +18,7 @@ const useStyles = createStyles((theme) => ({
   flex: {
     width: "100%",
     height: "auto",
-    padding: "8% 10%",
+    padding: "8% 15%",
     alignItems: "center",
     gap: "10%",
   },
