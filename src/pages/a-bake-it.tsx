@@ -1,8 +1,6 @@
 import {
   Button,
   createStyles,
-  Divider,
-  Flex,
   Grid,
   Stack,
 } from "@mantine/core";
@@ -14,13 +12,10 @@ import partners from "@/assets/partners-bakeit.jpg";
 import redIcon from "@/assets/icon-bakeit-red.png";
 import {
   ADDRESS,
-  bakeItSocials,
   MAPS_ADDRESS_URL,
   MAPS_IFRAME_URL,
 } from "@/utils/constants";
-import { FaMapMarkerAlt, FaPhoneAlt } from "react-icons/fa";
 import Link from "next/link";
-import { MdOutlineEmail } from "react-icons/md";
 import { LogoDivider } from "@/components/Divider";
 
 const useStyles = createStyles((theme) => ({
@@ -47,7 +42,7 @@ const useStyles = createStyles((theme) => ({
     width: "fit-content",
     height: "45px",
 
-    alignSelf: "flex-end",
+    alignSelf: "center",
   },
 }));
 
@@ -63,29 +58,32 @@ export default function ABakeIt() {
           content="minimum-scale=1, initial-scale=1, width=device-width"
         />
       </Head>
+      <Stack align="center" sx={{gap: 0}}>
+        <LogoDivider/>
+        <Text ff="Mermaid" c="black" fz={30} fw={700}>
+          QUEM SOMOS
+        </Text>
+      </Stack>
       <Grid columns={11} className={classes.grid} gutter="sm" mt={16} mb={16}>
         <Grid.Col span={5} className={classes.gridCol}>
           <Box
             w="100%"
             h="auto"
-            sx={{ position: "relative", aspectRatio: "763 / 1024" }}
+            sx={{ position: "relative", aspectRatio: "763 / 1024", boxShadow: "0 0 26px -4px rgba(0,0,0,0.63)" }}
           >
             <Image src={partners} alt="Foto Sócios" fill={true} />
           </Box>
         </Grid.Col>
         <Grid.Col span={5} className={classes.gridCol} offset={1}>
           <Stack align="center" sx={{ gap: 16 }}>
-            <Box
-              w="64px"
-              h="auto"
-              sx={{ position: "relative", aspectRatio: "1" }}
+            <Text
+              component="p"
+              ff="Chaparral"
+              c="#404040"
+              fz={20}
+              ta="justify"
+              sx={{ textIndent: "24px" }}
             >
-              <Image src={redIcon} alt="Icon Vermelho" fill={true} />
-            </Box>
-            <Text ff="Mermaid" c="black" fz={30} fw={700}>
-              QUEM SOMOS
-            </Text>
-            <Text component="p" ff="Chaparral" c="#404040" fz={20} ta="justify" sx={{textIndent: "24px"}}>
               Criada em 2014 na cidade de Matinhos, litoral do Paraná, com o
               nome original Hangry Grrrls pelas sócias Giulie Amaral e Clari
               Penha, a Bake It tem como objetivo central mostrar ao público que
@@ -110,12 +108,25 @@ export default function ABakeIt() {
         </Grid.Col>
       </Grid>
       <LogoDivider />
-      <Grid columns={12} className={classes.grid} gutter="xl" align="center" mb={32}>
+      <Grid
+        columns={12}
+        className={classes.grid}
+        gutter="xl"
+        align="center"
+        mb={32}
+      >
         <Grid.Col span={5}>
           <Text ff="Mermaid" c="black" ta="center" fz={30} fw={700}>
             ONDE NOS ENCONTRAR
           </Text>
-          <Text mt={16} ff="Chaparral" c="#404040" fz={20} ta="justify" sx={{textIndent: "24px"}}>
+          <Text
+            mt={16}
+            ff="Chaparral"
+            c="#404040"
+            fz={20}
+            ta="justify"
+            sx={{ textIndent: "24px" }}
+          >
             Possuímos um espaço físico disponível para a retirada das
             encomendas, localizado ao lado do portal de Santa Felicidade. Também
             é possível optar pelo método de delivery em que levaremos sua
@@ -142,78 +153,45 @@ export default function ABakeIt() {
               />
             </Grid.Col>
             <Grid.Col span={1}>
-              <Grid
-                columns={12}
-                h="100%"
-                p="15% 0"
-                gutter="0"
-                align="center"
-                justify="center"
-              >
-                <Grid.Col span={2}>
-                  <FaMapMarkerAlt color="#AE2E2D" size={32} />
-                </Grid.Col>
-                <Grid.Col span={10}>
-                  <Link href={MAPS_ADDRESS_URL} target="_blank">
-                    <Text
-                      ff="Chaparral"
-                      c="#404040"
-                      fz={18}
-                      fw={600}
-                      ta="justify"
-                      sx={{
-                        ":hover": {
-                          textDecoration: "underline",
-                        },
-                      }}
-                    >
-                      {ADDRESS}
-                    </Text>
-                  </Link>
-                </Grid.Col>
-                <Grid.Col span={2}>
-                  <FaPhoneAlt color="#AE2E2D" size={28} />
-                </Grid.Col>
-                <Grid.Col span={10}>
-                  <Link href={bakeItSocials.PHONE_TO} target="_blank">
-                    <Text
-                      ff="Chaparral"
-                      c="#404040"
-                      fz={18}
-                      fw={600}
-                      ta="justify"
-                      sx={{
-                        ":hover": {
-                          textDecoration: "underline",
-                        },
-                      }}
-                    >
-                      {bakeItSocials.PHONE}
-                    </Text>
-                  </Link>
-                </Grid.Col>
-                <Grid.Col span={2}>
-                  <MdOutlineEmail color="#AE2E2D" size={32} />
-                </Grid.Col>
-                <Grid.Col span={10}>
-                  <Link href={bakeItSocials.EMAIL_TO} target="_blank">
-                    <Text
-                      ff="Chaparral"
-                      c="#404040"
-                      fz={18}
-                      fw={600}
-                      ta="justify"
-                      sx={{
-                        ":hover": {
-                          textDecoration: "underline",
-                        },
-                      }}
-                    >
-                      {bakeItSocials.EMAIL}
-                    </Text>
-                  </Link>
-                </Grid.Col>
-              </Grid>
+              <Stack align="center" justify="center">
+                <Text ff="Mermaid" c="black" ta="center" fz={30} fw={700}>
+                  Bake It - Mercês
+                </Text>
+                <Link href={MAPS_ADDRESS_URL} target="_blank">
+                  <Text
+                    ff="Chaparral"
+                    c="#404040"
+                    fz={18}
+                    fw={600}
+                    ta="center"
+                    sx={{
+                      ":hover": {
+                        textDecoration: "underline",
+                      },
+                    }}
+                  >
+                    {ADDRESS}
+                  </Text>
+                </Link>
+                <Button
+                  component="a"
+                  href={MAPS_ADDRESS_URL}
+                  target="_blank"
+                  size="lg"
+                  color="dark"
+                  radius="xl"
+                  ff="Chaparral"
+                  sx={{
+                    ":hover":{
+                      color: "black",
+                      backgroundColor: "white",
+                      border: "2px solid black"
+                    }
+                  }}
+                >
+                  Veja no Google Maps
+                </Button>
+              </Stack>
             </Grid.Col>
           </Grid>
         </Grid.Col>

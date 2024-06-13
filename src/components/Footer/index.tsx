@@ -170,7 +170,7 @@ export function Footer() {
             </Flex>
             <List withPadding>
               {routes.map((item, i) => (
-                <List.Item key={item.label +"Pastel"+ i}>
+                <List.Item key={item.label +"Page"+ i}>
                   <Link
                     className={classes.link}
                     href={item.route}
@@ -181,7 +181,7 @@ export function Footer() {
               ))}
             </List>
           </Stack>
-          <Link href={WILLIG_GITHUB} className={classes.developedBy}>
+          <Link href={WILLIG_GITHUB} className={classes.developedBy} target={"_blank"}>
             <Flex gap="xs" align="center">
               <Text>
                 Desenvolvido por Gabriel Willig

@@ -22,7 +22,7 @@ export function LogoDivider () {
         <Grid.Col span={1}>
           <Flex align="center" justify="center">
             <Box
-              w="96px"
+              w="80px"
               h="auto"
               sx={{
                 position: "relative",

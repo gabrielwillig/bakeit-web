@@ -231,7 +231,7 @@ export default function Home() {
             </Stack>
           </Grid.Col>
           <Grid.Col span={1} className={classes.gridCol}>
-            <InstaFeed limit={3} />
+            {/*<InstaFeed limit={3} />*/}
           </Grid.Col>
         </Grid>
       </Stack>
