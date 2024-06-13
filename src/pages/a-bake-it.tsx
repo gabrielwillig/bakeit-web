@@ -58,7 +58,7 @@ export default function ABakeIt() {
           content="minimum-scale=1, initial-scale=1, width=device-width"
         />
       </Head>
-      <Stack align="center" sx={{gap: 0}}>
+      <Stack align="center">
         <LogoDivider/>
         <Text ff="Mermaid" c="black" fz={30} fw={700}>
           QUEM SOMOS
